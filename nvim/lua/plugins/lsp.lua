@@ -6,7 +6,19 @@ return {
       -- Ensure servers table exists
       opts.servers = opts.servers or {}
 
-      -- Add intelephense configuration
+      -- Add Dart LSP (dartls) configuration
+      opts.servers.dartls = {
+        filetypes = { "dart" },
+        root_dir = require("lspconfig.util").root_pattern("pubspec.yaml"),
+        settings = {
+          dart = {
+            completeFunctionCalls = true, -- Auto-complete function calls
+            enableSdkFormatter = true, -- Enable Dart formatter
+          },
+        },
+      }
+
+      -- Add Intelephense (PHP LSP) configuration
       opts.servers.intelephense = {
         settings = {
           intelephense = {
