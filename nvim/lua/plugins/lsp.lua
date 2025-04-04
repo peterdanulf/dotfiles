@@ -27,8 +27,20 @@ return {
               exclude = { "**/node_modules/**", "**/vendor/**", "**/.git/**" },
             },
             stubs = {
-              "wordpress",
-              "core",
+              "apache", "bcmath", "bz2", "calendar", "com_dotnet", "Core", 
+              "curl", "date", "dba", "dom", "enchant", "fileinfo", "filter", "fpm",
+              "ftp", "gd", "gettext", "gmp", "hash", "iconv", "imap", "intl", 
+              "json", "ldap", "libxml", "mbstring", "mcrypt", "mysql", "mysqli",
+              "oci8", "odbc", "openssl", "pcntl", "pcre", "PDO", "pdo_mysql",
+              "pdo_pgsql", "pdo_sqlite", "pgsql", "Phar", "posix", "pspell", 
+              "readline", "recode", "Reflection", "regex", "session", "shmop", 
+              "SimpleXML", "snmp", "soap", "sockets", "sodium", "SPL", "sqlite3",
+              "standard", "superglobals", "sysvmsg", "sysvsem", "sysvshm", "tidy",
+              "tokenizer", "xml", "xmlreader", "xmlrpc", "xmlwriter", "xsl", "Zend OPcache",
+              "zip", "zlib", "wordpress"
+            },
+            environment = {
+              includePaths = {}
             },
             diagnostics = {
               enable = true,
