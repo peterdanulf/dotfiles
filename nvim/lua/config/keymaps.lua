@@ -18,3 +18,12 @@ vim.api.nvim_set_keymap("v", "<D-k>", ":m '<-2<CR>gv=gv", { noremap = true, sile
 
 vim.api.nvim_set_keymap("n", "j", "<Plug>(accelerated_jk_gj)", {})
 vim.api.nvim_set_keymap("n", "k", "<Plug>(accelerated_jk_gk)", {})
+
+-- Search next and center
+vim.api.nvim_set_keymap("n", "n", "nzzzv", { noremap = true, silent = true })
+-- Search previous and center
+vim.api.nvim_set_keymap("n", "N", "Nzzzv", { noremap = true, silent = true })
+-- Paragraph backward and center
+vim.api.nvim_set_keymap("n", "{", "{zz", { noremap = true, silent = true })
+-- Paragraph forward and center
+vim.api.nvim_set_keymap("n", "}", "}zz", { noremap = true, silent = true })
