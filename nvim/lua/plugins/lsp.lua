@@ -3,6 +3,15 @@ return {
     "neovim/nvim-lspconfig",
     ---@class PluginLspOpts
     opts = function(_, opts)
+      -- Configure root detection to prioritize git repo over package.json
+      local util = require("lspconfig.util")
+      local original_root_pattern = util.root_pattern
+      util.root_pattern = function(...)
+        local patterns = { ... }
+        -- Always check for .git, compose.yaml, Makefile first, then other patterns
+        return original_root_pattern('.git', 'compose.yaml', 'Makefile', unpack(patterns))
+      end
+      
       -- Ensure servers table exists
       opts.servers = opts.servers or {}
 
