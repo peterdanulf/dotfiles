@@ -20,6 +20,13 @@ return {
             ["default"] = actions.file_edit,
           },
         },
+        git = {
+          status = {
+            actions = {
+              ["default"] = actions.file_edit,
+            },
+          },
+        },
       })
     end,
   },
