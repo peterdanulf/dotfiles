@@ -10,12 +10,14 @@ return {
           actions = {
             ["alt-i"] = actions.toggle_ignore,
             ["alt-h"] = actions.toggle_hidden,
+            ["default"] = actions.file_edit,
           },
         },
         grep = {
           actions = {
             ["alt-i"] = actions.toggle_ignore,
             ["alt-h"] = actions.toggle_hidden,
+            ["default"] = actions.file_edit,
           },
         },
       })
