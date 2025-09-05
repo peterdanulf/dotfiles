@@ -27,3 +27,21 @@ vim.api.nvim_set_keymap("n", "N", "Nzzzv", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "{", "{zz", { noremap = true, silent = true })
 -- Paragraph forward and center
 vim.api.nvim_set_keymap("n", "}", "}zz", { noremap = true, silent = true })
+
+-- Telescope keybindings
+local telescope = require("telescope.builtin")
+
+-- 1. Search in opened buffers
+vim.keymap.set("n", "<leader>sB", function()
+  telescope.live_grep({ grep_open_files = true })
+end, { desc = "Grep Open Buffers" })
+
+-- 2. Search in modified git files
+vim.keymap.set("n", "<leader>sf", function()
+  local files = vim.fn.systemlist("git diff --name-only")
+  if vim.tbl_isempty(files) then
+    print("No modified files")
+    return
+  end
+  telescope.live_grep({ search_dirs = files })
+end, { desc = "Grep Modified Git Files" })
