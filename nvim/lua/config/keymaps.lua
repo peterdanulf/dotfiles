@@ -45,3 +45,10 @@ vim.keymap.set("n", "<leader>sf", function()
   end
   telescope.live_grep({ search_dirs = files })
 end, { desc = "Grep Modified Git Files" })
+
+-- LazyDocker
+if vim.fn.executable("lazydocker") == 1 then
+  vim.keymap.set("n", "<leader>gD", function()
+    LazyVim.terminal("lazydocker", { ctrl_hjkl = true })
+  end, { desc = "LazyDocker" })
+end
