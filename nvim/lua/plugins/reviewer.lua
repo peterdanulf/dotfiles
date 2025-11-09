@@ -15,6 +15,7 @@ return {
         show_resolved_comments = false,
         default_reviewers = {},
         exclude_reviewers = {},
+        use_copilot_suggestions = true,
       })
     end,
     keys = {
