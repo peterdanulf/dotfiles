@@ -7,7 +7,7 @@ return {
     },
     config = function()
       require("reviewer").setup({
-        picker_order = { "fzf", "telescope", "snacks" },
+        picker_order = { "fzf", "telescope" },
         pr_search_filter = "involves:@me state:open sort:updated-desc",
         pr_limit = 20,
         auto_assign_to_me = true,
