@@ -19,8 +19,20 @@ return {
       })
     end,
     keys = {
-      { "<leader>gr", function() require("reviewer").pick_pr() end, desc = "Review PRs" },
-      { "<leader>go", function() require("reviewer").create_pr() end, desc = "Create PR" },
+      {
+        "<leader>gr",
+        function()
+          require("reviewer").pick_pr()
+        end,
+        desc = "Review PRs",
+      },
+      {
+        "<leader>go",
+        function()
+          require("reviewer").create_pr()
+        end,
+        desc = "Create PR",
+      },
     },
   },
 }
