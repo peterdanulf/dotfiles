@@ -16,8 +16,6 @@ vim.api.nvim_set_keymap("v", "<D-j>", ":m '>+1<CR>gv=gv", { noremap = true, sile
 -- Visual mode: Move selection up
 vim.api.nvim_set_keymap("v", "<D-k>", ":m '<-2<CR>gv=gv", { noremap = true, silent = true })
 
-vim.api.nvim_set_keymap("n", "j", "<Plug>(accelerated_jk_gj)", {})
-vim.api.nvim_set_keymap("n", "k", "<Plug>(accelerated_jk_gk)", {})
 
 -- Search next and center
 vim.api.nvim_set_keymap("n", "n", "nzzzv", { noremap = true, silent = true })
